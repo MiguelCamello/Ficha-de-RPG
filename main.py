@@ -27,7 +27,8 @@ while True:
 |  [1] Criar ficha de RPG              |
 |  [2] Consultar ficha                 |
 |  [3] Listar todas as fichas          |
-|  [4] Editar ficha                    |
+|  [4] Excluir ficha                   |
+|  [5] Editar ficha                    |
 |                                      |
 |  [0] Sair                            |
 |                                      |
@@ -197,8 +198,61 @@ while True:
             print(" Aperta 0 burro, vou deixar passar dessa vez")
             time.sleep(2)
 
-        # opção 4 edição json
+
     elif menu_principal == "4":
+        cls()
+        print("""
+========================================
+|            EXCLUIR FICHA             |
+========================================
+|                                      |
+|      Insira o id da ficha que        |
+|      deseja que seja excluida        |
+|      tendo em mente que ira          |
+|      ficar um espaço em branco       |
+|                                      |
+========================================
+""")
+        try:
+            id_excluir = int(input("> ").strip())
+            ficha_excluir = carregar_json(id_excluir)
+
+            trocar_tela()
+            ficha_excluir.mostrar_ficha
+            print("""
+========================================
+|       DESEJA EXCLUIR FICHA?          |
+========================================
+|                                      |
+|   [S] Excluir ficha                  |
+|   [N] não excluir                    |
+|                                      |
+|   [0] não excluir fechar             |
+|                                      |
+========================================
+            """)
+            certeza = input("> ").strip().lower()
+
+            if certeza == "s":
+                deletar(id_excluir)
+                print(" Ficha excluida com sucesso!")
+                time.sleep(2)
+            elif certeza == "n":
+                print("  Ficha não foi excluida.")
+                time.sleep(2)
+            elif certeza == "0":
+                print("  Fechando...")
+                time.sleep(2)
+                cls()
+                sys.exit()
+                
+
+        except AttributeError:
+            print("  Esse id não existe!!!")
+            time.sleep(2)
+
+        # opção 5 edição json
+    elif menu_principal == "5":
         while True:
             cls()
             print("""
@@ -338,4 +392,10 @@ while True:
 
         # 5 opção sair
     elif menu_principal == "0":
+        print("  Fechando...")
+        time.sleep(2)
         break
+
+    else:
+        print("  Insira uma resposta valida!!!")
+        time.sleep(2)

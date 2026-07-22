@@ -86,3 +86,15 @@ def atualizar(ficha):
 
     with ARQUIVO.open("w", encoding="utf-8") as perJson:
         json.dump(personagens, perJson, indent=4, ensure_ascii=False)
+
+def deletar(id):
+    with ARQUIVO.open("r", encoding="utf-8") as perJson:
+        personagens = json.load(perJson)
+
+    for i, p in enumerate(personagens):
+            if p["id"] == id:
+                del personagens[i]
+                break
+
+    with ARQUIVO.open("w", encoding="utf-8") as perJson:
+        json.dump(personagens, perJson, indent=4, ensure_ascii=False)

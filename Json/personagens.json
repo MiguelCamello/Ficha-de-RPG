@@ -95,21 +95,5 @@
             "carne seca"
         ],
         "id": 6
-    },
-    {
-        "nome": "manu",
-        "raça": "elfo",
-        "classe": "druida",
-        "nivel": 5,
-        "força": 9,
-        "saude": 95,
-        "defesa": 11,
-        "inteligencia": 20,
-        "itens": [
-            "cajado de madeira",
-            "ervas",
-            "amuleto da floresta"
-        ],
-        "id": 7
     }
 ]
