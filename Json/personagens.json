@@ -95,5 +95,20 @@
             "carne seca"
         ],
         "id": 6
+    },
+    {
+        "nome": "Kesia",
+        "raça": "humano",
+        "classe": "guerreira",
+        "nivel": 60,
+        "força": 80,
+        "saude": 80,
+        "defesa": 60,
+        "inteligencia": 100,
+        "itens": [
+            "espada",
+            "bike"
+        ],
+        "id": 7
     }
 ]

@@ -284,7 +284,7 @@ while True:
 |   [2] Força       [5] Inteligência   |
 |   [3] Saúde       [6] Itens          |
 |                                      |
-|   [0] Sair                           |
+|   [0] Continuar                      |
 |                                      |
 ========================================
                         """)
@@ -352,15 +352,19 @@ while True:
 ========================================
                         """)
                         atualiza = input("> ").strip().lower()
+                        menu = False # gambiarrinha pra voltar pro menu
+
                         if atualiza == "s":
                             atualizar(ficha_edit)
                             print("  Ficha atualizada com sucesso!")
+                            menu = True
                             time.sleep(2)
                             break
 
                         elif atualiza == "n":
                             print("  Ficha não salva.")
                             time.sleep(2)
+                            menu = True
                             break
 
 
@@ -372,6 +376,7 @@ while True:
                         else:
                             print("  Resposta inválida.")
                             time.sleep(2)
+                    if menu: break
 
 
 
