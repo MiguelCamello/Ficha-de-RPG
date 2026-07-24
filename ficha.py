@@ -1,13 +1,16 @@
 class Jogador:
-    def __init__(self, nome, raça, classe):
+    def __init__(self, nome, raça, genero, classe):
         self.nome = nome
         self.raça = raça
+        self.genero = genero
         self.classe = classe
 
         self.nivel = 1
+        self.mana = 0
         self.força = 0
-        self.saude = 0
-        self.defesa = 0
+        self.agilidade = 0
+        self.vitalidade = 0
+        self.resistencia = 0
         self.inteligencia = 0
         self.itens = []
         self.id = None
@@ -17,12 +20,15 @@ class Jogador:
         persona = cls(
             save["nome"],
             save["raça"],
+            save["genero"],
             save["classe"]
         )
         persona.nivel = save["nivel"]
+        persona.mana = save["mana"]
         persona.força = save["força"]
-        persona.saude = save["saude"]
-        persona.defesa = save["defesa"]
+        persona.agilidade = save["agilidade"]
+        persona.vitalidade = save["vitalidade"]
+        persona.resistencia = save["resistencia"]
         persona.inteligencia = save["inteligencia"]
         persona.itens = save["itens"]
         persona.id = save["id"]
@@ -48,12 +54,15 @@ class Jogador:
         return {
             "nome": self.nome,
             "raça": self.raça,
+            "gênero": self.genero,
             "classe": self.classe,
             "nivel": self.nivel,
+            "mana": self.mana,
             "força": self.força,
-            "saude": self.saude,
-            "defesa": self.defesa,
-            "inteligencia": self.inteligencia,
+            "agilidade": self.agilidade,
+            "vitalidade": self.vitalidade,
+            "resistência": self.resistencia,
+            "inteligência": self.inteligencia,
             "itens": self.itens,
             "id": id
 
@@ -68,16 +77,20 @@ class Jogador:
 |                                      |
 |   Nome: {self.nome}
 |   Raça: {self.raça}
+|   Gênero: {self.genero}
 |   Classe: {self.classe}
-|   Nivel: {self.nivel}
 |                                      |
 |   Estatisticas                       |
 ========================================
 |                                      |
+|   Nivel: {self.nivel}
+|                                      
+|   Mana: {self.mana}
 |   Força: {self.força}
-|   Saúde: {self.saude}
-|   Defesa: {self.defesa}
-|   Inteligencia: {self.inteligencia}
+|   Agilidade: {self.agilidade}
+|   Vitalidade: {self.vitalidade}
+|   Resistência: {self.resistencia}
+|   Inteligência: {self.inteligencia}
 |                                      |
 |   Inventário                         |
 ========================================

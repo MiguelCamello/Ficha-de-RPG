@@ -43,16 +43,20 @@ def listar_fichas(buscar=None):
 |                                      |
 |   Nome: {p["nome"]}
 |   Raça: {p["raça"]}
+|   Gênero: {p["genero"]}
 |   Classe: {p["classe"]}
-|   Nivel: {p["nivel"]}
 |                                      |
 |   Estatisticas                       |
 ========================================
 |                                      |
+|   Nivel: {p["nivel"]}
+|
+|   Mana: {p["mana"]}
 |   Força: {p["força"]}
-|   Saúde: {p["saude"]}
-|   Defesa: {p["defesa"]}
-|   Inteligencia: {p["inteligencia"]}
+|   Agilidade: {p["agilidade"]}
+|   Vitalidade: {p["vitalidade"]}
+|   Resistência: {p["resistencia"]}
+|   Inteligência: {p["inteligencia"]}
 |                                      |
 |   Inventário                         |
 ========================================

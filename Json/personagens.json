@@ -1,114 +1,17 @@
 [
     {
         "nome": "Miguel",
-        "raça": "elfo",
-        "classe": "assasino",
-        "nivel": 1,
-        "força": 20,
-        "saude": 10,
-        "defesa": 10,
-        "inteligencia": 10,
-        "itens": [
-            "espada",
-            "comida",
-            "agua",
-            "flecha"
-        ],
-        "id": 1
-    },
-    {
-        "nome": "Arthur",
         "raça": "humano",
         "classe": "guerreiro",
-        "nivel": 5,
-        "força": 18,
-        "saude": 120,
-        "defesa": 15,
-        "inteligencia": 8,
+        "nivel": 22,
+        "força": 50,
+        "vitalidade": 30,
+        "resistência": 40,
+        "inteligência": 200,
         "itens": [
-            "espada longa",
-            "escudo",
-            "poção de cura"
+            "lapis",
+            "caderno"
         ],
-        "id": 2
-    },
-    {
-        "nome": "Miguel",
-        "raça": "elfa",
-        "classe": "arqueira",
-        "nivel": 4,
-        "força": 12,
-        "saude": 85,
-        "defesa": 9,
-        "inteligencia": 14,
-        "itens": [
-            "arco",
-            "flechas",
-            "capa"
-        ],
-        "id": 3
-    },
-    {
-        "nome": "Enzo",
-        "raça": "anão",
-        "classe": "paladino",
-        "nivel": 7,
-        "força": 20,
-        "saude": 140,
-        "defesa": 22,
-        "inteligencia": 10,
-        "itens": [
-            "martelo",
-            "escudo sagrado",
-            "armadura"
-        ],
-        "id": 4
-    },
-    {
-        "nome": "João",
-        "raça": "humana",
-        "classe": "maga",
-        "nivel": 10,
-        "força": 20,
-        "saude": 70,
-        "defesa": 40,
-        "inteligencia": 25,
-        "itens": [
-            "cajado",
-            "livro de magias",
-            "cristal arcano"
-        ],
-        "id": 5
-    },
-    {
-        "nome": "Miguel",
-        "raça": "orc",
-        "classe": "berserker",
-        "nivel": 8,
-        "força": 24,
-        "saude": 160,
-        "defesa": 12,
-        "inteligencia": 4,
-        "itens": [
-            "machado duplo",
-            "pele de lobo",
-            "carne seca"
-        ],
-        "id": 6
-    },
-    {
-        "nome": "Kesia",
-        "raça": "humano",
-        "classe": "guerreira",
-        "nivel": 60,
-        "força": 80,
-        "saude": 80,
-        "defesa": 60,
-        "inteligencia": 100,
-        "itens": [
-            "espada",
-            "bike"
-        ],
-        "id": 7
+        "id": 1
     }
 ]

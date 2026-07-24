@@ -30,7 +30,7 @@ while True:
 |  [4] Excluir ficha                   |
 |  [5] Editar ficha                    |
 |                                      |
-|  [0] Sair                            |
+|  [0] Fecha programa                  |
 |                                      |
 ========================================
 """)
@@ -49,15 +49,17 @@ while True:
 |                                      |
 |   • Nome                             |
 |   • Raça                             |
+|   • Gênero                           |
 |   • Classe                           |
 |                                      |
 ========================================
 """)
         # criando objeto
-        nome = input("Nome: ").strip().capitalize()
-        raça = input("Raça: ").strip()
-        classe = input("Classe: ").strip()
-        ficha_ = Jogador(nome, raça, classe)
+        nome = input("  Nome: ").strip().capitalize()
+        raça = input("  Raça: ").strip()
+        genero = input("  Gênero: ").strip()
+        classe = input("  Classe: ").strip()
+        ficha_ = Jogador(nome, raça, genero, classe)
 
         print("\n  Deseja editar os dados? S/N")
         editar = input("> ").strip().lower()
@@ -74,54 +76,67 @@ while True:
 |                                      |
 |   O que deseja alterar?              |
 |                                      |
-|   [1] Nível       [4] Defesa         |
-|   [2] Força       [5] Inteligência   |
-|   [3] Saúde       [6] Itens          |
+|   [1] Nível       [5] Agilidade      |
+|   [2] Mana        [6] Vitalidade     |
+|   [3] Força       [7] Resistência    |
+|   [4] Itens       [8] Inteligência   |
 |                                      |
-|   [0] Sair                           |
+|   [0] Continuar                      |
 |                                      |
 ========================================
 """)
                 
                 edição_ficha = input("> ")
-
+                # Nivel
                 if edição_ficha == "1":
-                    print("  Novo valor do nível:")
+                    print("  Novo valor do Nível:")
                     ficha_.atualizar_status("nivel", int(input("> ")))
-                    print("  Valor do nivel alterado com sucesso!")
+                    print("  Valor do Nível alterado com sucesso!")
                     time.sleep(1)
-
+                # Mana
                 elif edição_ficha == "2":
-                    print("  Novo valor da força:")
-                    ficha_.atualizar_status("força", int(input("> ")))
-                    print("  Valor da força alterada com sucesso!")
+                    print("  Novo valor da Mana:")
+                    ficha_.atualizar_status("mana", int(input("> ")))
+                    print("  Valor da Mana alterada com sucesso!")
                     time.sleep(1)
-
+                # Força
                 elif edição_ficha == "3":
-                    print("  Novo valor da saúde:")
-                    ficha_.atualizar_status("saude", int(input("> ")))
-                    print("  Valor da saúde alterada com sucesso!")
+                    print("  Novo valor da Força:")
+                    ficha_.atualizar_status("força", int(input("> ")))
+                    print("  Valor da Força alterada com sucesso!")
                     time.sleep(1)
-
+                # Itens
                 elif edição_ficha == "4":
-                    print("  Novo valor da defesa:")
-                    ficha_.atualizar_status("defesa", int(input("> ")))
-                    print("  Valor da defesa alterada com sucesso!")
-                    time.sleep(1)
-
-                elif edição_ficha == "5":
-                    print("  Novo valor da inteligência:")
-                    ficha_.atualizar_status("inteligencia", int(input("> ")))
-                    print("  Valor da inteligência alterada com sucesso!")
-                    time.sleep(1)
-
-                elif edição_ficha == "6":
                     print("  Informe os itens separados por virgula e espaço (, ):")
                     novos_items = input("> ").split(", ")
                     ficha_.adicionar_itens(*novos_items)
                     print(f"  Itens adicionados com sucesso!")
                     time.sleep(2)
-
+                # Agilidade
+                elif edição_ficha == "5":
+                    print("  Novo valor da Agilidade:")
+                    ficha_.atualizar_status("agilidade", int(input("> ")))
+                    print("  Valor da Agilidade alterada com sucesso!")
+                    time.sleep(1)
+                # Vitalidade
+                elif edição_ficha == "6":
+                    print("  Novo valor da Vitalidade:")
+                    ficha_.atualizar_status("vitalidade", int(input("> ")))
+                    print("  Valor da Vitalidade alterada com sucesso!")
+                    time.sleep(1)
+                # Resistencia
+                elif edição_ficha == "7":
+                    print("  Novo valor da Resistência:")
+                    ficha_.atualizar_status("resistencia", int(input("> ")))
+                    print("  Valor da Resistência alterada com sucesso!")
+                    time.sleep(1)
+                # Inteligencia
+                elif edição_ficha == "8":
+                    print("  Novo valor da Inteligência:")
+                    ficha_.atualizar_status("inteligencia", int(input("> ")))
+                    print("  Valor da Inteligência alterada com sucesso!")
+                    time.sleep(1)
+                # continuar
                 elif edição_ficha == "0":
                     cls()
                     break
@@ -261,7 +276,6 @@ while True:
 ========================================
 """)
             try:
-            
                 id_edição = int(input("> ").strip())
                 ficha_edit = carregar_json(id_edição)
 
@@ -280,9 +294,10 @@ while True:
 |                                      |
 |   O que deseja alterar?              |
 |                                      |
-|   [1] Nível       [4] Defesa         |
-|   [2] Força       [5] Inteligência   |
-|   [3] Saúde       [6] Itens          |
+|   [1] Nível       [5] Agilidade      |
+|   [2] Mana        [6] Vitalidade     |
+|   [3] Força       [7] Resistência    |
+|   [4] Itens       [8] Inteligência   |
 |                                      |
 |   [0] Continuar                      |
 |                                      |
@@ -290,43 +305,55 @@ while True:
                         """)
                                         
                         edição_ficha = input("> ")
-        
+                        # Nivel
                         if edição_ficha == "1":
-                            print("  Novo valor do nível:")
+                            print("  Novo valor do Nível:")
                             ficha_edit.atualizar_status("nivel", int(input("> ")))
-                            print("  Valor do nivel alterado com sucesso!")
+                            print("  Valor do Nível alterado com sucesso!")
                             time.sleep(1)
-        
+                        # Mana
                         elif edição_ficha == "2":
-                            print("  Novo valor da força:")
-                            ficha_edit.atualizar_status("força", int(input("> ")))
-                            print("  Valor da força alterada com sucesso!")
+                            print("  Novo valor da Mana:")
+                            ficha_edit.atualizar_status("mana", int(input("> ")))
+                            print("  Valor da Mana alterada com sucesso!")
                             time.sleep(1)
-        
+                        # Força
                         elif edição_ficha == "3":
-                            print("  Novo valor da saúde:")
-                            ficha_edit.atualizar_status("saude", int(input("> ")))
-                            print("  Valor da saúde alterada com sucesso!")
+                            print("  Novo valor da Força:")
+                            ficha_edit.atualizar_status("força", int(input("> ")))
+                            print("  Valor da Força alterada com sucesso!")
                             time.sleep(1)
-        
+                        # Itens
                         elif edição_ficha == "4":
-                            print("  Novo valor da defesa:")
-                            ficha_edit.atualizar_status("defesa", int(input("> ")))
-                            print("  Valor da defesa alterada com sucesso!")
-                            time.sleep(1)
-        
-                        elif edição_ficha == "5":
-                            print("  Novo valor da inteligência:")
-                            ficha_edit.atualizar_status("inteligencia", int(input("> ")))
-                            print("  Valor da inteligência alterada com sucesso!")
-                            time.sleep(1)
-        
-                        elif edição_ficha == "6":
                             print("  Informe os itens separados por virgula e espaço (, ):")
                             novos_items = input("> ").split(", ")
                             ficha_edit.adicionar_itens(*novos_items)
                             print(f"  Itens adicionados com sucesso!")
                             time.sleep(2)
+                        # Agilidade
+                        elif edição_ficha == "5":
+                            print("  Novo valor da Agilidade:")
+                            ficha_edit.atualizar_status("agilidade", int(input("> ")))
+                            print("  Valor da Agilidade alterada com sucesso!")
+                            time.sleep(1)
+                        # Vitalidade
+                        elif edição_ficha == "6":
+                            print("  Novo valor da Vitalidade:")
+                            ficha_edit.atualizar_status("vitalidade", int(input("> ")))
+                            print("  Valor da Vitalidade alterada com sucesso!")
+                            time.sleep(1)
+                        # Resistencia
+                        elif edição_ficha == "7":
+                            print("  Novo valor da Resistência:")
+                            ficha_edit.atualizar_status("resistencia", int(input("> ")))
+                            print("  Valor da Resistência alterada com sucesso!")
+                            time.sleep(1)
+                        # Inteligencia
+                        elif edição_ficha == "8":
+                            print("  Novo valor da Inteligência:")
+                            ficha_edit.atualizar_status("inteligencia", int(input("> ")))
+                            print("  Valor da Inteligência alterada com sucesso!")
+                            time.sleep(1)
         
                         elif edição_ficha == "0":
                             cls()
