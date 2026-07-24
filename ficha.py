@@ -54,15 +54,15 @@ class Jogador:
         return {
             "nome": self.nome,
             "raça": self.raça,
-            "gênero": self.genero,
+            "genero": self.genero,
             "classe": self.classe,
             "nivel": self.nivel,
             "mana": self.mana,
             "força": self.força,
             "agilidade": self.agilidade,
             "vitalidade": self.vitalidade,
-            "resistência": self.resistencia,
-            "inteligência": self.inteligencia,
+            "resistencia": self.resistencia,
+            "inteligencia": self.inteligencia,
             "itens": self.itens,
             "id": id
 

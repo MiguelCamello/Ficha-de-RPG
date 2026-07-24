@@ -138,14 +138,16 @@ while True:
                     time.sleep(1)
                 # continuar
                 elif edição_ficha == "0":
-                    cls()
+                    trocar_tela()
                     break
 
                 else:
                     print("  Opção inválida, digite um numero de 0 a 6")
                     time.sleep(1)
 
-        print("""
+        while True:
+            ficha_.mostrar_ficha
+            print("""
 ========================================
 |           DESEJA SALVAR?             |
 ========================================
@@ -157,7 +159,6 @@ while True:
 |                                      |
 ========================================
 """)    
-        while True:
             salvar = input("> ").strip().lower()
             if salvar == "s":
                 save(ficha_)
@@ -356,7 +357,7 @@ while True:
                             time.sleep(1)
         
                         elif edição_ficha == "0":
-                            cls()
+                            trocar_tela()
                             break
         
                         else:
@@ -364,7 +365,6 @@ while True:
                             time.sleep(1)
 
                     while True:
-                        trocar_tela()
                         ficha_edit.mostrar_ficha
                         print("""
 ========================================

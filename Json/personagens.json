@@ -2,16 +2,219 @@
     {
         "nome": "Miguel",
         "raça": "humano",
-        "classe": "guerreiro",
-        "nivel": 22,
-        "força": 50,
-        "vitalidade": 30,
-        "resistência": 40,
-        "inteligência": 200,
+        "genero": "masculino",
+        "classe": "berserk",
+        "nivel": 20,
+        "mana": 10,
+        "força": 70,
+        "agilidade": 80,
+        "vitalidade": 50,
+        "resistencia": 70,
+        "inteligencia": 70,
         "itens": [
-            "lapis",
-            "caderno"
+            "dragon slayer",
+            "armadura berserk"
         ],
         "id": 1
+    },
+    {
+        "nome": "Manuela",
+        "raça": "elfa",
+        "genero": "feminino",
+        "classe": "arqueira",
+        "nivel": 18,
+        "mana": 35,
+        "força": 45,
+        "agilidade": 92,
+        "vitalidade": 55,
+        "resistencia": 50,
+        "inteligencia": 75,
+        "itens": [
+            "arco longo",
+            "aljava de flechas",
+            "capa élfica"
+        ],
+        "id": 2
+    },
+    {
+        "nome": "Enzo",
+        "raça": "anão",
+        "genero": "masculino",
+        "classe": "assassino",
+        "nivel": 16,
+        "mana": 5,
+        "força": 85,
+        "agilidade": 60,
+        "vitalidade": 80,
+        "resistencia": 88,
+        "inteligencia": 45,
+        "itens": [
+            "adagas gêmeas",
+            "capuz sombrio"
+        ],
+        "id": 3
+    },
+    {
+        "nome": "Maria Clara",
+        "raça": "humana",
+        "genero": "feminino",
+        "classe": "maga",
+        "nivel": 22,
+        "mana": 100,
+        "força": 20,
+        "agilidade": 55,
+        "vitalidade": 40,
+        "resistencia": 35,
+        "inteligencia": 98,
+        "itens": [
+            "cajado arcano",
+            "livro de feitiços"
+        ],
+        "id": 4
+    },
+    {
+        "nome": "Angelo",
+        "raça": "humano",
+        "genero": "masculino",
+        "classe": "paladino",
+        "nivel": 24,
+        "mana": 40,
+        "força": 82,
+        "agilidade": 42,
+        "vitalidade": 90,
+        "resistencia": 95,
+        "inteligencia": 60,
+        "itens": [
+            "martelo sagrado",
+            "armadura de placas"
+        ],
+        "id": 5
+    },
+    {
+        "nome": "Bressan",
+        "raça": "orc",
+        "genero": "masculino",
+        "classe": "espadachin",
+        "nivel": 19,
+        "mana": 0,
+        "força": 96,
+        "agilidade": 58,
+        "vitalidade": 92,
+        "resistencia": 80,
+        "inteligencia": 28,
+        "itens": [
+            "espada longa",
+            "escudo leve"
+        ],
+        "id": 6
+    },
+    {
+        "nome": "Spricigo",
+        "raça": "humano",
+        "genero": "masculino",
+        "classe": "tank",
+        "nivel": 21,
+        "mana": 25,
+        "força": 65,
+        "agilidade": 99,
+        "vitalidade": 48,
+        "resistencia": 45,
+        "inteligencia": 78,
+        "itens": [
+            "machado duplo",
+            "escudo pesado"
+        ],
+        "id": 7
+    },
+    {
+        "nome": "João",
+        "raça": "humano",
+        "genero": "masculino",
+        "classe": "cavaleiro",
+        "nivel": 17,
+        "mana": 10,
+        "força": 78,
+        "agilidade": 52,
+        "vitalidade": 84,
+        "resistencia": 86,
+        "inteligencia": 54,
+        "itens": [
+            "espada longa",
+            "escudo real"
+        ],
+        "id": 8
+    },
+    {
+        "nome": "Ana",
+        "raça": "elfa",
+        "genero": "feminino",
+        "classe": "druida",
+        "nivel": 20,
+        "mana": 85,
+        "força": 35,
+        "agilidade": 68,
+        "vitalidade": 62,
+        "resistencia": 55,
+        "inteligencia": 90,
+        "itens": [
+            "cajado da floresta",
+            "amuleto da natureza"
+        ],
+        "id": 9
+    },
+    {
+        "nome": "Gabriel",
+        "raça": "humano",
+        "genero": "masculino",
+        "classe": "monge",
+        "nivel": 15,
+        "mana": 40,
+        "força": 72,
+        "agilidade": 87,
+        "vitalidade": 66,
+        "resistencia": 64,
+        "inteligencia": 71,
+        "itens": [
+            "manoplas",
+            "manto espiritual"
+        ],
+        "id": 10
+    },
+    {
+        "nome": "Beatriz",
+        "raça": "humana",
+        "genero": "feminino",
+        "classe": "feiticeira",
+        "nivel": 23,
+        "mana": 110,
+        "força": 18,
+        "agilidade": 60,
+        "vitalidade": 42,
+        "resistencia": 38,
+        "inteligencia": 99,
+        "itens": [
+            "varinha encantada",
+            "anel mágico"
+        ],
+        "id": 11
+    },
+    {
+        "nome": "Lucas",
+        "raça": "meio-elfo",
+        "genero": "masculino",
+        "classe": "caçador",
+        "nivel": 18,
+        "mana": 30,
+        "força": 68,
+        "agilidade": 85,
+        "vitalidade": 60,
+        "resistencia": 58,
+        "inteligencia": 74,
+        "itens": [
+            "besta",
+            "faca de caça",
+            "botas de couro"
+        ],
+        "id": 12
     }
 ]
