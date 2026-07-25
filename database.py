@@ -1,10 +1,21 @@
 from pathlib import Path
 from ficha import *
+import textwrap
 import json
 
 BASE_DIR = Path(__file__).parent
 ARQUIVO = BASE_DIR / "Json" / "personagens.json"
 ID = BASE_DIR / "Json" / "config.json"
+
+def lista_json(itens):
+    inventario = ", ".join(itens)
+    
+    linhas = []
+    
+    for linha in textwrap.wrap(inventario, width=36):
+        linhas.append(f"|  {linha:<36}|")
+    
+    return "\n".join(linhas)
 
 def save(ficha):
     with ID.open("r", encoding="utf-8") as IDJson:
@@ -38,30 +49,30 @@ def listar_fichas(buscar=None):
         print(f"""
                   
 ========================================
-|       FICHA DE PERSONAGEM - {p["id"]}
+|       FICHA DE PERSONAGEM - {p["id"] if p["id"] is not None else '?':<9}|
 ========================================
 |                                      |
-|   Nome: {p["nome"]}
-|   Raça: {p["raça"]}
-|   Gênero: {p["genero"]}
-|   Classe: {p["classe"]}
+|   Nome: {p["nome"]:<29}|
+|   Raça: {p["raça"]:<29}|
+|   Gênero: {p["genero"]:<27}|
+|   Classe: {p["classe"]:<27}|
 |                                      |
 |   Estatisticas                       |
 ========================================
 |                                      |
-|   Nivel: {p["nivel"]}
-|
-|   Mana: {p["mana"]}
-|   Força: {p["força"]}
-|   Agilidade: {p["agilidade"]}
-|   Vitalidade: {p["vitalidade"]}
-|   Resistência: {p["resistencia"]}
-|   Inteligência: {p["inteligencia"]}
+|   Nivel: {p["nivel"]:<28}|
+|                                      |
+|   Mana: {p["mana"]:<29}|
+|   Força: {p["força"]:<28}|
+|   Agilidade: {p["agilidade"]:<24}|
+|   Vitalidade: {p["vitalidade"]:<23}|
+|   Resistência: {p["resistencia"]:<22}|
+|   Inteligência: {p["inteligencia"]:<21}|
 |                                      |
 |   Inventário                         |
 ========================================
 |                                      |
-|   {", ".join(p["itens"])}
+{lista_json(p["itens"])}
 |                                      |
 ========================================
 

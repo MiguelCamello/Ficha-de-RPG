@@ -1,3 +1,5 @@
+import textwrap
+
 class Jogador:
     def __init__(self, nome, raça, genero, classe):
         self.nome = nome
@@ -50,6 +52,16 @@ class Jogador:
     def adicionar_itens(self, *itens):
         self.itens.extend(itens)
 
+    def listar_itens(self):
+        inventario = ", ".join(self.itens)
+
+        linhas = []
+
+        for linha in textwrap.wrap(inventario, width=36):
+            linhas.append(f"|  {linha:<36}|")
+
+        return "\n".join(linhas)
+
     def to_dict(self, id=None):
         return {
             "nome": self.nome,
@@ -72,30 +84,30 @@ class Jogador:
     def mostrar_ficha(self):
         print(f"""
 ========================================
-|       FICHA DE PERSONAGEM - {self.id}
+|       FICHA DE PERSONAGEM - {self.id if self.id is not None else '?':<9}|
 ========================================
 |                                      |
-|   Nome: {self.nome}
-|   Raça: {self.raça}
-|   Gênero: {self.genero}
-|   Classe: {self.classe}
+|   Nome: {self.nome:<29}|
+|   Raça: {self.raça:<29}|
+|   Gênero: {self.genero:<27}|
+|   Classe: {self.classe:<27}|
 |                                      |
 |   Estatisticas                       |
 ========================================
 |                                      |
-|   Nivel: {self.nivel}
-|                                      
-|   Mana: {self.mana}
-|   Força: {self.força}
-|   Agilidade: {self.agilidade}
-|   Vitalidade: {self.vitalidade}
-|   Resistência: {self.resistencia}
-|   Inteligência: {self.inteligencia}
+|   Nivel: {self.nivel:<28}|
+|                                      |
+|   Mana: {self.mana:<29}|
+|   Força: {self.força:<28}|
+|   Agilidade: {self.agilidade:<24}|
+|   Vitalidade: {self.vitalidade:<23}|
+|   Resistência: {self.resistencia:<22}|
+|   Inteligência: {self.inteligencia:<21}|
 |                                      |
 |   Inventário                         |
 ========================================
 |                                      |
-|   {", ".join(self.itens)}
+{self.listar_itens()}
 |                                      |
 ========================================
 """)
