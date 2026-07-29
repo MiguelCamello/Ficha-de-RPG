@@ -61,11 +61,22 @@ while True:
         classe = input("  Classe: ").strip()
         ficha_ = Jogador(nome, raça, genero, classe)
 
-        print("\n  Deseja editar os dados? S/N")
-        editar = input("> ").strip().lower()
+        print("""
+========================================
+|       Deseja editar ficha ou         | 
+|       randomizar os status?          |
+========================================
+|                                      |
+|   [1] Editar Status                  |
+|   [2] Randomizar status              |
+|                                      |
+========================================
+""")
+        
+        editar = input("> ").strip()
         trocar_tela()
 
-        if editar == "s":
+        if editar == "1":
             while True:
                 trocar_tela()
                 ficha_.mostrar_ficha
@@ -144,6 +155,11 @@ while True:
                 else:
                     print("  Opção inválida, digite um numero de 0 a 6")
                     time.sleep(1)
+
+        elif editar == "2":
+            atributos = ["mana", "força", "agilidade", "vitalidade", "resistencia", "inteligencia"]
+            for att in atributos:
+                ficha_.randomizer(att)
 
         while True:
             ficha_.mostrar_ficha

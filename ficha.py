@@ -1,4 +1,5 @@
 import textwrap
+import random as rm
 
 class Jogador:
     def __init__(self, nome, raça, genero, classe):
@@ -77,8 +78,15 @@ class Jogador:
             "inteligencia": self.inteligencia,
             "itens": self.itens,
             "id": id
-
         }
+    
+    def randomizer(self, atributo):
+        if atributo not in self.__dict__:
+            print("atributo invalido")
+            return
+        setattr(self, atributo, rm.randint(1, 100))
+
+        
 
     @property
     def mostrar_ficha(self):
