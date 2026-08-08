@@ -5,12 +5,12 @@ import time
 import sys
 
 
-cls()
 # frufru de inicialização
-iniciando()
-time.sleep(1)
 cls()
-print("inicialização completa")
+print(RPG)
+loading(0.05)
+time.sleep(1)
+print("\ninicialização completa!")
 time.sleep(1)
 
 while True:
@@ -74,7 +74,7 @@ while True:
 """)
         
         editar = input("> ").strip()
-        trocar_tela()
+        # trocar_tela()
 
         if editar == "1":
             while True:
@@ -160,6 +160,11 @@ while True:
             atributos = ["mana", "força", "agilidade", "vitalidade", "resistencia", "inteligencia"]
             for att in atributos:
                 ficha_.randomizer(att)
+
+        else:
+            print("  Opção Inválida, ficha não editada!")
+            time.sleep(1)
+            cls()
 
         while True:
             ficha_.mostrar_ficha
